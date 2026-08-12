@@ -26,9 +26,10 @@ jobs:
         with:
           gradle-version: '8.2'
           arguments: ':app:assembleDebug'
+          working-directory: android-app
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: workbuddy-dashboard-apk
-          path: app/build/outputs/apk/debug/*.apk
+          path: android-app/app/build/outputs/apk/debug/*.apk
