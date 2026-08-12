@@ -26,9 +26,9 @@ jobs:
 
       - name: Build debug APK
         run: |
-          curl -sL https://services.gradle.org/distributions/gradle-8.2-bin.zip -o /tmp/gradle.zip
+          curl -sL https://services.gradle.org/distributions/gradle-8.7-bin.zip -o /tmp/gradle.zip
           unzip -q /tmp/gradle.zip -d /tmp
-          export PATH="/tmp/gradle-8.2/bin:$PATH"
+          export PATH="/tmp/gradle-8.7/bin:$PATH"
           gradle :app:assembleDebug --no-daemon
 
       - name: Upload APK
